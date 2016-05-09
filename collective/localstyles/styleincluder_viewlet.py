@@ -3,7 +3,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 from zope.component.interfaces import ISite
 from plone.folder.interfaces import IFolder
 
-LOCALSTYLES_FILE = 'localstyles.css'
+LOCALSTYLES_FILES = ['localstyles.css', 'localstyles_css']
 
 
 class StyleIncluderViewlet(ViewletBase):
@@ -13,10 +13,12 @@ class StyleIncluderViewlet(ViewletBase):
         context = self.context
 
         def _get_localstyles(context):
-            if IFolder.providedBy(context) and LOCALSTYLES_FILE in context:
-                return context[LOCALSTYLES_FILE]
+            if IFolder.providedBy(context):
+                for it in LOCALSTYLES_FILES:
+                    if it in context:
+                        return context[it]
 
-            elif ISite.providedBy(context):
+            if ISite.providedBy(context):
                 # Stop traversing at ISite boundaries
                 return None
 
