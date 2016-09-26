@@ -11,6 +11,12 @@ Incompatibilities:
   [thet]
 
 
+New:
+
+- Add last modification time as URL parameter to be sure to get changed styles through caching.
+  [thet]
+
+
 1.0 (2014-06-03)
 ----------------
 

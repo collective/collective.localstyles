@@ -11,6 +11,7 @@ class StyleIncluderViewlet(ViewletBase):
     @property
     def localstyles_url(self):
         context = self.context
+        localstyles_url = None
 
         def _get_localstyles(context):
             if IFolder.providedBy(context):
@@ -27,4 +28,10 @@ class StyleIncluderViewlet(ViewletBase):
                 return _get_localstyles(aq_parent(context))
 
         localstyles = _get_localstyles(context)
-        return localstyles.absolute_url() if localstyles else None
+        if localstyles:
+            localstyles_url = u'{0}?t={1}'.format(
+                localstyles.absolute_url(),
+                localstyles.ModificationDate().replace(':', '').replace('-', '')  # mod time  # noqa
+            )
+
+        return localstyles_url
