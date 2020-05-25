@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <layers>
-  <layer remove="True"
-      name="collective.localstyles"
-      interface="collective.localstyles.interfaces.IBrowserLayer" />
+  <layer interface="collective.localstyles.interfaces.IBrowserLayer"
+         name="collective.localstyles"
+         remove="True"
+  />
 </layers>
