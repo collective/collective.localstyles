@@ -1,9 +1,10 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:gs="http://namespaces.zope.org/genericsetup"
-    i18n_domain="collective.localstyles">
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.localstyles"
+    >
 
   <include package="plone.browserlayer" />
 
@@ -11,27 +12,27 @@
       name="collective.localstyles.styleincluder"
       for="*"
       manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      permission="zope.Public"
       class=".styleincluder_viewlet.StyleIncluderViewlet"
       template="styleincluder_viewlet.pt"
-      permission="zope.Public"
       layer=".interfaces.IBrowserLayer"
       />
 
   <gs:registerProfile
       name="default"
-      directory="profiles/default"
       title="collective.localstyles installation"
       description="installs collective.localstyles."
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      directory="profiles/default"
       />
   <gs:registerProfile
       name="uninstall"
-      directory="profiles/uninstall"
       title="collective.localstyles uninstallation"
       description="Uninstalls collective.localstyles."
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      directory="profiles/uninstall"
       />
 
 </configure>
