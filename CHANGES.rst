@@ -4,7 +4,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Allow localstyles also in ISite roots.
+  [thet]
 
 
 1.1 (2017-02-13)
@@ -13,7 +14,7 @@ Changelog
 Incompatibilities:
 
 - Changed module-global ``LOCALSTYLES_FILE`` to ``LOCALSTYLES_FILES`` and allow multiple local style file names.
-  Default are: ``localstyles.css`` and ``localstyles_css``. 
+  Default are: ``localstyles.css`` and ``localstyles_css``.
   [thet]
 
 

@@ -14,7 +14,7 @@ class StyleIncluderViewlet(ViewletBase):
         localstyles_url = None
 
         def _get_localstyles(context):
-            if IFolder.providedBy(context):
+            if IFolder.providedBy(context) or ISite.providedBy(context):
                 for it in LOCALSTYLES_FILES:
                     if it in context:
                         return context[it]
