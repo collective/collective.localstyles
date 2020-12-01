@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2020-12-01)
 ----------------
 
 - Allow localstyles also in ISite roots.
