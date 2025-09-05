@@ -1,11 +1,20 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:gs="http://namespaces.zope.org/genericsetup"
-    i18n_domain="collective.localstyles">
+  >
+
 
   <include package="plone.browserlayer" />
+
+  <browser:page
+      name="collective.localstyles.styleincluder"
+      for="*"
+      class=".styleincluder_viewlet.StyleIncluderView"
+      template="styleincluder_viewlet.pt"
+      permission="zope.Public"
+      layer=".interfaces.IBrowserLayer"
+      />
 
   <browser:viewlet
       name="collective.localstyles.styleincluder"

@@ -4,7 +4,12 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add a view variant of the localstyles template. It has the same name as the
+  viewlet:  collective.localstyles.styleincluder
+  [thet]
+
+- Modernize localstyles template.
+  [thet]
 
 
 1.2 (2020-12-01)
