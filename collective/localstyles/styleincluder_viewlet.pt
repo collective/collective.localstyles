@@ -1,3 +1,6 @@
 <link xmlns:tal="http://xml.zope.org/namespaces/tal"
-    tal:define="localstyles_url view/localstyles_url" tal:condition="localstyles_url" tal:attributes="href localstyles_url"
-    rel="stylesheet" type="text/css" />
+    href="${localstyles_url}"
+    rel="stylesheet"
+    tal:define="localstyles_url view/localstyles_url"
+    tal:condition="localstyles_url"
+    />

@@ -4,7 +4,8 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Modernize localstyles template.
+  [thet]
 
 
 1.2 (2020-12-01)
