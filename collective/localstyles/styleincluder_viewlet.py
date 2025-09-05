@@ -37,3 +37,11 @@ class StyleIncluderViewlet(ViewletBase):
             )
 
         return localstyles_url
+
+
+class StyleIncluderView(StyleIncluderViewlet):
+    """A view version of the viewlet, for use in page templates."""
+
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request

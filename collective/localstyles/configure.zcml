@@ -7,6 +7,15 @@
 
   <include package="plone.browserlayer" />
 
+  <browser:page
+      name="collective.localstyles.styleincluder"
+      for="*"
+      class=".styleincluder_viewlet.StyleIncluderView"
+      template="styleincluder_viewlet.pt"
+      permission="zope.Public"
+      layer=".interfaces.IBrowserLayer"
+      />
+
   <browser:viewlet
       name="collective.localstyles.styleincluder"
       for="*"
